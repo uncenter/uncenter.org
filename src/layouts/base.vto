@@ -64,9 +64,9 @@ socialLinks:
 		<link href="{{ site.author.github.url }}" rel="me">
 		<link href="{{ site.author.mastodon.url }}" rel="me">
 
-		<link rel="canonical" href="{{ page.url |> url }}">
-		<link rel="alternate" type="application/rss+xml" href="{{ 'feed.xml' |> url }}">
-		<link rel="alternate" type="application/json" href="{{ 'feed.json' |> url }}">
+		<link rel="canonical" href="{{ page.url |> toAbsoluteUrl }}">
+		<link rel="alternate" type="application/rss+xml" href="{{ 'feed.xml' |> toAbsoluteUrl }}">
+		<link rel="alternate" type="application/json" href="{{ 'feed.json' |> toAbsoluteUrl }}">
 
 		{{ if layout !== 'post.vto' }}
 			<meta property="og:type" content="website">
@@ -80,11 +80,11 @@ socialLinks:
 		{{ /if }}
 		<meta property="og:title" content="{{ title }}">
 		<meta property="og:description" content="{{ description }}">
-		<meta property="og:image" content="{{ '/1024w.png' |> url }}">
+		<meta property="og:image" content="{{ '/1024w.png' |> toAbsoluteUrl }}">
 
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:title" content="{{ title }}">
-		<meta name="twitter:image" content="{{ '/1024w.png' |> url }}">
+		<meta name="twitter:image" content="{{ '/1024w.png' |> toAbsoluteUrl }}">
 	</head>
 	<body class="flex flex-col gap-8 mx-auto px-8 py-4 text-base/7 bg-base text-text font-display max-w-[120ch]">
 		<header class="flex flex-col sm:flex-row gap-6 sm:gap-0 sm:space-y-0 justify-between leading-6 py-8">

@@ -1,4 +1,4 @@
-import urlize from '../../config/urlize.js';
+import { toAbsoluteUrl } from '../../config/url.js';
 
 class Page {
 	data() {
@@ -15,7 +15,7 @@ class Page {
 			.map((page) =>
 				`
     <url>
-        <loc>${urlize(page.url)}</loc>
+        <loc>${toAbsoluteUrl(page.url)}</loc>
         <lastmod>${page.date.toISOString()}</lastmod>
     </url>`.replaceAll(/^\n/g, ''),
 			)

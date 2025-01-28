@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 import stringify from '../json-pretty-stringify.js';
-import urlize from '../urlize.js';
+import { toAbsoluteUrl } from '../url.js';
 
 const toShortDate = (dateObject) => {
 	// 10/14/1983
@@ -53,5 +53,5 @@ export const filters = (eleventyConfig) => {
 	eleventyConfig.addFilter('stringify', (value) => {
 		return stringify(value, '\t');
 	});
-	eleventyConfig.addFilter('url', urlize);
+	eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
 };

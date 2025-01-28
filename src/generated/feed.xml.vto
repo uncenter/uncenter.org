@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: false
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
 	<title>{{ site.domain }}</title>
 	<subtitle>{{ site.feed.description }}</subtitle>
-	<link href="{{ permalink |> url }}" rel="self"/>
+	<link href="{{ permalink |> toAbsoluteUrl }}" rel="self"/>
 	<link href="{{ site.url }}"/>
 	<updated>{{ collections.posts |> getNewestCollectionItemDate |> dateToRfc3339 }}</updated>
 	<id>{{ site.url }}</id>
@@ -13,13 +13,13 @@ eleventyExcludeFromCollections: false
 		<name>{{ site.author.name }}</name>
 	</author>
 	{{- for post of collections.posts.toReversed() }}
-	{{- set url = post.url |> url }}
+	{{- set url = post.url |> toAbsoluteUrl }}
 	<entry>
 		<title>{{ post.data.title }}</title>
 		<link href="{{ url }}"/>
 		<updated>{{ post.date |> dateToRfc3339 }}</updated>
 		<id>{{ url }}</id>
-		<content xml:lang="{{ site.lang }}" type="html">{{ post.content |> await htmlToAbsoluteUrls(url) |> escape }}</content>
+		<content xml:lang="{{ site.lang }}" type="html">{{ post.content |> await renderTransforms(post.data.page, site.url) |> escape }}</content>
 	</entry>
 	{{- /for }}
 </feed>

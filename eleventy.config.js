@@ -1,7 +1,7 @@
 import { collections, filters, shortcodes } from './config/11ty/index.js';
 
 import pluginExternalLinks from '@aloskutov/eleventy-plugin-external-links';
-import pluginRSS from '@ryanccn/eleventy-plugin-rss';
+import pluginRSS from '@11ty/eleventy-plugin-rss';
 import pluginTOC from '@uncenter/eleventy-plugin-toc';
 import pluginAutoCacheBuster from 'eleventy-auto-cache-buster';
 import pluginIcons from 'eleventy-plugin-icons';

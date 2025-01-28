@@ -1,28 +1,5 @@
-// Inspired by https://github.com/ryanccn/ryanccn.dev/blob/main/src/generated/feed.json.11ty.js.
-
-// MIT License
-
-// Copyright (c) 2022 Ryan Cao
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
-
-import urlize from '../../config/urlize.js';
+import { toAbsoluteUrl } from '../../config/url.js';
+import site from '../../site.config.js';
 
 class Page {
 	data() {
@@ -41,19 +18,20 @@ class Page {
 				authors: [
 					{
 						name: data.site.author.name,
-						avatar: urlize('1024w.png'),
+						avatar: toAbsoluteUrl('1024w.png'),
 					},
 				],
 				home_page_url: data.site.url,
-				feed_url: urlize('feed.json'),
+				feed_url: toAbsoluteUrl('feed.json'),
 				items: await Promise.all(
 					[...data.collections.posts].reverse().map(async (post) => ({
 						id: post.filePathStem,
-						url: urlize(post.url),
+						url: toAbsoluteUrl(post.url),
 						title: post.data.title,
-						content_html: await this.htmlToAbsoluteUrls(
-							post.templateContent,
-							urlize(post.url),
+						content_html: await this.renderTransforms(
+							post.content,
+							post.data.page,
+							site.url,
 						),
 						summary: post.data.description,
 						date_published: post.data.date,
