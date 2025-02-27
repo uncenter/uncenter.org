@@ -24,7 +24,7 @@
 		"@uncenter/eleventy-plugin-toc": "^1.0.3",
 		"browserslist": "^4.24.4",
 		"dotenv": "^16.4.7",
-		"eleventy-auto-cache-buster": "^0.7.0",
+		"eleventy-auto-cache-buster": "^0.8.1",
 		"eleventy-plugin-icons": "^4.5.1",
 		"eleventy-plugin-validate": "^0.1.3",
 		"eleventy-plugin-vento": "^4.1.1",

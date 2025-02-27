@@ -50,8 +50,8 @@ importers:
         specifier: ^16.4.7
         version: 16.4.7
       eleventy-auto-cache-buster:
-        specifier: ^0.7.0
-        version: 0.7.0
+        specifier: ^0.8.1
+        version: 0.8.1
       eleventy-plugin-icons:
         specifier: ^4.5.1
         version: 4.5.1
@@ -791,10 +791,6 @@ packages:
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
-  cross-spawn@7.0.3:
-    resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
-    engines: {node: '>= 8'}
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -923,8 +919,8 @@ packages:
   electron-to-chromium@1.5.88:
     resolution: {integrity: sha512-K3C2qf1o+bGzbilTDCTBhTQcMS9KW60yTAaTeeXsfvQuTDDwlokLam/AdqlqcSy9u4UainDgsHV23ksXAOgamw==}
 
-  eleventy-auto-cache-buster@0.7.0:
-    resolution: {integrity: sha512-OcICXm0XwbPJxhrCZyKU2cC3w9ciRUEUl1SBOKgImeroF5OwnaJ2xho/c0V+NRJ+NILXnCq9YR0Yr1dZ+yGP1w==}
+  eleventy-auto-cache-buster@0.8.1:
+    resolution: {integrity: sha512-w2YilXXgOOdRMrdYt6PRbEbnDuS8huR4fTW3ky+yvMEfNz/O55QEM5+Ti1D2oXQ80QLu+QytBRQyyYSTX48Jog==}
 
   eleventy-plugin-icons@4.5.1:
     resolution: {integrity: sha512-rwvLa05i6371avfdzt19KzBiVQc/9OLV7OGaD0X0sYzMFu6h+QkhtOGDTCOibUe5FXKDQGly3DQ0Us3IQlsKuw==}
@@ -2777,12 +2773,6 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cross-spawn@7.0.3:
-    dependencies:
-      path-key: 3.1.1
-      shebang-command: 2.0.0
-      which: 2.0.2
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -2897,7 +2887,7 @@ snapshots:
 
   electron-to-chromium@1.5.88: {}
 
-  eleventy-auto-cache-buster@0.7.0:
+  eleventy-auto-cache-buster@0.8.1:
     dependencies:
       glob: 10.4.5
 
@@ -3036,7 +3026,7 @@ snapshots:
 
   foreground-child@3.3.0:
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
   fresh@0.5.2: {}
