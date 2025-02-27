@@ -113,8 +113,8 @@ importers:
         specifier: ^8.5.1
         version: 8.5.1
       sass:
-        specifier: ^1.83.4
-        version: 1.83.4
+        specifier: ^1.85.1
+        version: 1.85.1
       simple-icons:
         specifier: ^13.17.0
         version: 13.17.0
@@ -1796,8 +1796,8 @@ packages:
   safe-buffer@5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
 
-  sass@1.83.4:
-    resolution: {integrity: sha512-B1bozCeNQiOgDcLd33e2Cs2U60wZwjUUXzh900ZyQF5qUasvMdDZYbQ566LJu7cqR+sAHlAfO6RMkaID5s6qpA==}
+  sass@1.85.1:
+    resolution: {integrity: sha512-Uk8WpxM5v+0cMR0XjX9KfRIacmSG86RH4DCCZjLU2rFh5tyutt9siAXJ7G+YfxQ99Q6wrRMbMlVl6KqUms71ag==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3737,7 +3737,7 @@ snapshots:
 
   safe-buffer@5.1.2: {}
 
-  sass@1.83.4:
+  sass@1.85.1:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.0.3
