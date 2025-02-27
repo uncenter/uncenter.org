@@ -30,7 +30,7 @@
 		"eleventy-plugin-vento": "^4.1.1",
 		"html-minifier": "^4.0.0",
 		"lightningcss": "^1.29.1",
-		"linkedom": "^0.18.7",
+		"linkedom": "^0.18.9",
 		"lucide-static": "^0.473.0",
 		"luxon": "^3.4.4",
 		"markdown-it": "^14.1.0",
