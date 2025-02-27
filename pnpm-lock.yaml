@@ -74,7 +74,7 @@ importers:
         specifier: ^0.473.0
         version: 0.473.0
       luxon:
-        specifier: ^3.4.4
+        specifier: ^3.5.0
         version: 3.5.0
       markdown-it:
         specifier: ^14.1.0
